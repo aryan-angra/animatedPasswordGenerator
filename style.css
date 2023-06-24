@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+.container{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.05);
+    padding: 4%;
+    width: 40%;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    
+}
+img.reaction{
+    height: 200px;
+    margin-top: -25%;
+}
+.passwdbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin: 4% 0;
+    font-size: 1rem;
+    border: 1px solid #b4b4b4;
+    padding: 2%;
+    width: 100%;
+}
+.passwdbox input{
+    width: 90%;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 1%;
+    font-size: 1rem;
+}
+.passwdbox span{
+    color: #787878;
+    cursor: pointer;
+}
+label.title{
+    font-weight: 500;
+    margin: 4% 0;
+    display: inline-block;
+}
+.pass-indicator{
+    width: 100%;
+    height: 4px;
+    position: relative;
+    background-color: #f7f7f7;
+    margin-top: 0.75rem;
+    margin: 2% 0;
+    border-radius: 25px;
+}
+
+.pass-indicator::before{
+    position: absolute;
+    content: "";
+    height:100%;
+    width: 50%;
+    border-radius: inherit;
+    transition:  width 0.3s ease;
+}
+.pass-indicator#weak::before{
+    width: 20%;
+    background: #e64a4a;
+}
+.pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+}
+.pass-indicator#strong::before{
+    width: 100%;
+    background: #6453ed;
+}
+input{
+    accent-color: #6453ed;
+}
+input[type="range"]{
+    width: 100%;
+}
+
+
+.pass-length .details label.title{
+    width: 90%;
+}
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 3%;
+    margin-bottom: 3%;
+}
+.option{
+    margin: 3% 0;
+}
+.option input{
+    margin-right: 3%;
+}
+button.generate{
+    background: #6453ed;
+    color: #fff;
+    border-radius: 6px;
+    padding: 2% 4%;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+@media (max-width: 900px){
+    .container{
+        width: 80%;
+    margin-top: 9%;
+    }
+}
